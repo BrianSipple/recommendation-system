@@ -117,6 +117,10 @@ def getRecommendations(prefs, person, similarity=sim_pearson):
 ######## Now we match the products themselves ########
 
 def transformPrefs(prefs):
+	"""
+	Returns a dictionary of {prodcuts: {person: rating}} that can be
+	used with the same set of functions for product similarity discovery
+	"""
 	result = {}
 	for person in prefs:
 		for item in prefs[person]:
